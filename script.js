@@ -21,20 +21,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
         navLinks.forEach(function(link) {
             link.addEventListener('click', function() {
+                // ถ้าปุ่มที่กดมีคลาส dropdown-toggle (คือ Service หรือ Performance) ห้ามสั่งปิดเมนู!
+                if (this.classList.contains('dropdown-toggle')) {
+                    return; 
+                }
+
                 if (menuCollapse.classList.contains('show')) {
                     bsCollapse.hide();
                 }
             });
         });
 
-        if (toggler) {
-            toggler.addEventListener('click', function() {
+        // แต่ถ้ากดย่อยใน dropdown (dropdown-item) ค่อยให้มันปิด
+        var dropdownItems = document.querySelectorAll('.dropdown-item');
+        dropdownItems.forEach(function(item) {
+            item.addEventListener('click', function() {
                 if (menuCollapse.classList.contains('show')) {
                     bsCollapse.hide();
-                } else {
-                    bsCollapse.show();
                 }
             });
-        }
+        });
     }
 });

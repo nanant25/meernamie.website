@@ -178,17 +178,9 @@ html { scroll-behavior: smooth; }
     scroll-margin-top: 100px;
 }
 
-.fab, .fas, .far {
-    color: white !important;
-}
-
-.fa-facebook {
-    color: white !important;
-}
-
-#social{
-    color: white;
-}
+.fab, .fas, .far { color: white !important; }
+.fa-facebook { color: white !important; }
+#social{ color: white; }
 
 #myModal .modal-content {
     background: rgba(255, 255, 255, 0.95); 
@@ -202,31 +194,11 @@ html { scroll-behavior: smooth; }
     padding: 20px 30px;
 }
 
-#myModal .modal-title {
-    font-weight: 700;
-    color: #4b2a69; 
-}
-
-#myModal .modal-body {
-    padding: 30px;
-}
-
-#myModal .form-group {
-    margin-bottom: 20px;
-}
-
-#myModal label {
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: #555;
-}
-
-#myModal .form-control {
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    padding: 12px 15px;
-    transition: 0.3s;
-}
+#myModal .modal-title { font-weight: 700; color: #4b2a69; }
+#myModal .modal-body { padding: 30px; }
+#myModal .form-group { margin-bottom: 20px; }
+#myModal label { font-weight: 600; margin-bottom: 8px; color: #555; }
+#myModal .form-control { border-radius: 10px; border: 1px solid #ddd; padding: 12px 15px; transition: 0.3s; }
 
 #myModal .form-control:focus {
     border-color: #f16483; 
@@ -234,37 +206,9 @@ html { scroll-behavior: smooth; }
     outline: none;
 }
 
-#myModal .modal-footer {
-    border-top: none;
-    padding: 0;
-    justify-content: space-between;
-}
-
-#myModal .btn {
-    padding: 10px 25px;
-    border-radius: 12px;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-#myModal .btn-success {
-    background-color: #f16483;
-    border: none;
-    color: white;
-}
-
-#myModal .btn-success:hover {
-    background-color: #d64d6c;
-    transform: translateY(-2px);
-}
-
-#myModal .btn-secondary {
-    background-color: #eee;
-    color: #777;
-    border: none;
-}
-
-#myModal .btn-secondary:hover {
-    background-color: #ddd;
-    color: #333;
-}
+#myModal .modal-footer { border-top: none; padding: 0; justify-content: space-between; }
+#myModal .btn { padding: 10px 25px; border-radius: 12px; font-weight: 600; transition: 0.3s; }
+#myModal .btn-success { background-color: #f16483; border: none; color: white; }
+#myModal .btn-success:hover { background-color: #d64d6c; transform: translateY(-2px); }
+#myModal .btn-secondary { background-color: #eee; color: #777; border: none; }
+#myModal .btn-secondary:hover { background-color: #ddd; color: #333; }
