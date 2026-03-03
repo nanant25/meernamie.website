@@ -5,8 +5,8 @@ function openFullImage(element) {
         const fullImg = document.getElementById('fullImage');
         if (fullImg) {
             fullImg.src = imgSrc;
-            var myModal = new bootstrap.Modal(document.getElementById('imageModal'));
-            myModal.show();
+            var myImageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+            myImageModal.show();
         }
     }
 }
@@ -14,14 +14,13 @@ function openFullImage(element) {
 document.addEventListener('DOMContentLoaded', function() {
     var menuCollapse = document.getElementById('navbar1');
     var navLinks = document.querySelectorAll('.nav-link');
-    var toggler = document.querySelector('.navbar-toggler');
 
     if (menuCollapse && typeof bootstrap !== 'undefined') {
         var bsCollapse = new bootstrap.Collapse(menuCollapse, { toggle: false });
 
         navLinks.forEach(function(link) {
             link.addEventListener('click', function() {
-                // ถ้าปุ่มที่กดมีคลาส dropdown-toggle (คือ Service หรือ Performance) ห้ามสั่งปิดเมนู!
+                // ป้องกันไม่ให้เมนูหุบเมื่อกด Dropdown (Service/Performance)
                 if (this.classList.contains('dropdown-toggle')) {
                     return; 
                 }
@@ -32,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-        // แต่ถ้ากดย่อยใน dropdown (dropdown-item) ค่อยให้มันปิด
+        // ให้เมนูหุบเมื่อกดเลือกรายการย่อยใน Dropdown
         var dropdownItems = document.querySelectorAll('.dropdown-item');
         dropdownItems.forEach(function(item) {
             item.addEventListener('click', function() {
